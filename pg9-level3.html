@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hidden Object Quest</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/level3.css">
+    </head>
+    <body oncontextmenu="return false;">
+      </script>
+        <div id="loader" class="middle">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+            <div class="bar bar5"></div>
+            
+        </div>
+        <div class="unselectable" id="mouse">
+        <img id="Book" src="img/book.png">
+        <img id="Sword" src="img/sword.png">
+        <img id="Hat" src="img/hat.png">
+        <img id="Globe" src="img/globe.png">
+        <img id="Cassette" src="img/cassette.png">
+       
+        </div>
+        <div id="grid">
+            <span id="1">Book</span>
+            <span id="2">Silver Sword</span>
+            <span id="3">Hat</span>
+            <span id="4">Globe</span>
+            <span id="5">Cassette</span>
+            
+        </div>
+        <audio controls autoplay loop hidden>
+            <source src="bgm/bgm.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        
+        <script type="text/javascript">
+            let user_score = 0;
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+            document.getElementById("mouse").style.cursor = "default";
+
+            document.onkeydown = function (e) {
+          if (event.keyCode == 123) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+            return false;
+          }
+        };
+            document.getElementById('Book').onclick = function() {
+                user_score+=1
+                document.getElementById('1').style.textDecorationLine='line-through'; 
+                document.getElementById('Book').style.visibility='hidden';
+                if(user_score==5){
+                alert("Congratulations! You have found all the objects.");
+                window.location.href="pg10-gameover.html"
+                }
+            }
+            document.getElementById('Sword').onclick = function() {
+                user_score+=1
+                document.getElementById('2').style.textDecorationLine='line-through'; 
+                document.getElementById('Sword').style.visibility='hidden';
+                if(user_score==5){
+                alert("Congratulations! You have found all the objects.");
+                window.location.href="pg10-gameover.html"
+                }
+            }
+            document.getElementById('Hat').onclick = function() {
+                user_score+=1
+                document.getElementById('3').style.textDecorationLine='line-through'; 
+                document.getElementById('Hat').style.visibility='hidden';
+                if(user_score==5){
+                alert("Congratulations! You have found all the objects.");
+                window.location.href="pg10-gameover.html"
+                }
+            }
+            document.getElementById('Globe').onclick = function() {
+                user_score+=1;
+                document.getElementById('4').style.textDecorationLine='line-through'; 
+                document.getElementById('Globe').style.visibility='hidden';
+                if(user_score==5){
+                alert("Congratulations! You have found all the objects.");
+                window.location.href="pg10-gameover.html"
+                }
+            }
+            document.getElementById('Cassette').onclick = function() {
+                user_score+=1;
+                document.getElementById('5').style.textDecorationLine='line-through'; 
+                document.getElementById('Cassette').style.visibility='hidden';
+                if(user_score==5){
+                alert("Congratulations! You have found all the objects.");
+                window.location.href="pg10-gameover.html"
+                }
+            }
+    
+            document.onreadystatechange = function() {
+                    if (document.readyState !== "complete") {
+                        document.querySelector(
+                        "body").style.visibility = "hidden";
+                        document.querySelector(
+                        "#loader").style.visibility = "visible";
+                    } 
+                    else {
+                        document.querySelector(
+                        "#loader").style.display = "none";
+                        document.querySelector(
+                        "body").style.visibility = "visible";
+                    }
+                }
+        </script>
+    </body>
+    
+</html>

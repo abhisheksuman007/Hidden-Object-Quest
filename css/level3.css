@@ -1,0 +1,164 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+  }
+  .middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .bar {
+    width: 10px;
+    height: 70px;
+    background: #fff;
+    display: inline-block;
+    transform-origin: bottom center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+    animation: loader 1.2s linear infinite;
+  }
+  .bar1 {
+    animation-delay: 0.1s;
+  }
+  .bar2 {
+    animation-delay: 0.2s;
+  }
+  .bar3 {
+    animation-delay: 0.3s;
+  }
+  .bar4 {
+    animation-delay: 0.4s;
+  }
+  .bar5 {
+    animation-delay: 0.5s;
+  }
+ 
+  
+@keyframes loader {
+    0% {
+      transform: scaleY(0.1);
+      background:white ;
+    }
+    50% {
+      transform: scaleY(1);
+      background: rgb(9, 248, 81);
+    }
+    100% {
+      transform: scaleY(0.1);
+      background: transparent;
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+body {
+    background-image: url(img/level3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+@font-face {
+    font-family: AlbertsthalTyperwriter;
+    src: url(fonts/AlbertsthalTypewriter.ttf);
+}
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#Book {
+  width: 180px;
+  height: 150px;
+  position: fixed;
+  display: block;
+  opacity: 0.9;
+  right: 6%;
+  bottom: 15%;
+  
+}
+#Sword {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    left: 50%;
+    
+    
+}
+
+
+#Hat{
+  width: 180px;
+  height: 150px;
+  position: fixed;
+  display: block;
+  opacity: 0.9;
+  left: 20%;
+  top: 15%;
+  
+}
+
+#Globe {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    display: block;
+    opacity: 0.8;
+    left: 55%;
+    bottom:30%;
+}
+#Cassette {
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    display: block;
+    opacity: 1;
+    top: 35%;
+    left: 0%;
+}
+
+
+#grid {
+    height: fit-content;
+    width: 75%;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-style: outset;
+    border-color: wheat;
+    border-width: 2px;
+    align-content: center;
+    padding: 0 2.5% 1% 2.5%;
+    
+}
+
+span {
+    padding: 1%;
+    padding-bottom: 0;
+    color: white;
+    font-size: 30px;
+    font-family: AlbertsthalTyperwriter;
+    margin: 0.5%;
+    margin-top: 0.3%;
+}
